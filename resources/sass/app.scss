@@ -1,1 +1,28 @@
-//
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/roboto/Roboto-Light.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/roboto/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/roboto/Roboto-Regular.ttf');
+    font-weight: normal;
+}
+
+$family-sans-serif: 'Roboto';
+
+$indigo: #1565c0;
+$primary: $indigo;
+
+@import "bulma";
+
+.mainfeaturelink {
+    padding-bottom: 2rem;
+}
