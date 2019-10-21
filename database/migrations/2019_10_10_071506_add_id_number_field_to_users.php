@@ -14,7 +14,7 @@ class AddIdNumberFieldToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('id_number')->after('id');
+            $table->string('id_number')->after('id')->default('');
         });
     }
 

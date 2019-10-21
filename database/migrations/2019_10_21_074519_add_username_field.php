@@ -14,7 +14,7 @@ class AddUsernameField extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->unique()->after('email');
+            $table->string('username')->unique()->after('email')->default('');
         });
     }
 
