@@ -18,9 +18,17 @@
 
 $family-sans-serif: 'Roboto';
 
+$blue: #2196f3;
 $red: #f44336;
+
 $indigo: #1565c0;
-$primary: $indigo;
+$indigo-invert: findColorInvert($indigo);
+$indigo-light: findLightColor($indigo);
+$indigo-dark: findDarkColor($indigo);
+
+$custom-colors: ("indigo": ($indigo, $indigo-invert, $indigo-light, $indigo-dark));
+
+$primary: $blue;
 $danger: $red;
 
 @import "bulma";
