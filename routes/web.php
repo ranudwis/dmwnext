@@ -13,12 +13,14 @@
 
 Route::view('/', 'home');
 
-Route::name('auth.')->group(function() {
+Route::middleware('guest')->name('auth.')->group(function() {
     Route::view('/daftar', 'auth/signup')->name('signup');
-
     Route::post('/daftar', 'AuthController@signup')->name('signup');
+
+    Route::view('/masuk', 'auth/signin')->name('signin');
+    Route::post('/masuk', 'AuthController@signin')->name('signin');
 });
 
-Route::name('dashboard.')->group(function() {
+Route::middleware('auth')->name('dashboard.')->group(function() {
     Route::view('/dashboard', 'dashboard/index')->name('index');
 });
