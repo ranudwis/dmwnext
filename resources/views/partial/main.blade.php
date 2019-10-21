@@ -9,5 +9,27 @@
     </head>
     <body>
         @yield('content')
+
+        <div class="notification is-danger main-notification">
+            <button class="delete"></button>
+            <div class="content">
+                @if ($errors->any())
+                    <ul>
+                        @foreach ($errors->all() as $messages)
+                            <li>
+                                {{ $messages }}
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
+            </div>
+        </div>
+
+        <script src="{{ asset('js/script.js') }}"></script>
+        <script>
+            @if ($errors->any())
+                danger();
+            @endif
+        </script>
     </body>
 </html>

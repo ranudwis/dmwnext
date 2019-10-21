@@ -12,3 +12,13 @@
 */
 
 Route::view('/', 'home');
+
+Route::name('auth.')->group(function() {
+    Route::view('/daftar', 'auth/signup')->name('signup');
+
+    Route::post('/daftar', 'AuthController@signup')->name('signup');
+});
+
+Route::name('dashboard.')->group(function() {
+    Route::view('/dashboard', 'dashboard/index')->name('index');
+});

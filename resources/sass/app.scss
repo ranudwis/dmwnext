@@ -18,11 +18,25 @@
 
 $family-sans-serif: 'Roboto';
 
+$red: #f44336;
 $indigo: #1565c0;
 $primary: $indigo;
+$danger: $red;
 
 @import "bulma";
 
 .mainfeaturelink {
     padding-bottom: 2rem;
+}
+
+.main-notification {
+    display: none;
+    position: fixed;
+    right: 2em;
+    bottom: 2rem;
+    width: 50rem;
+}
+
+.main-notification--show {
+    display: block;
 }

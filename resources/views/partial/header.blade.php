@@ -26,7 +26,7 @@
                         <div class="navbar-item">
                             <div class="buttons">
                                 <a class="button is-white" href="">Masuk</a>
-                                <a class="button is-white is-outlined" href="">Daftar</a>
+                                <a class="button is-white is-outlined" href="{{ route('auth.signup') }}">Daftar</a>
                             </div>
                         </div>
                     </div>

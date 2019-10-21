@@ -25,21 +25,25 @@
 
         @slot('footer')
             <div class="container mainfeaturelink">
-                <div class="buttons">
-                    <a href="" class="button is-medium is-white is-outlined">
-                        <span class="icon">
-                            <i class="fas fa-book fa-fw"></i>
-                        </span>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <a href="" class="button is-medium is-white is-outlined">
+                            <span class="icon">
+                                <i class="fas fa-book fa-fw"></i>
+                            </span>
 
-                        <span>Mata Kuliah</span>
-                    </a>
-                    <a href="" class="button is-medium is-white is-outlined">
-                        <span class="icon">
-                            <i class="fas fa-file-alt"></i>
-                        </span>
+                            <span>Mata Kuliah</span>
+                        </a>
+                    </div>
+                    <div class="control">
+                        <a href="" class="button is-medium is-white is-outlined">
+                            <span class="icon">
+                                <i class="fas fa-file-alt"></i>
+                            </span>
 
-                        <span>Webtutor</span>
-                    </a>
+                            <span>Webtutor</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         @endslot
