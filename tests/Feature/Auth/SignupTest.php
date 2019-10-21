@@ -31,6 +31,7 @@ class SignupTest extends TestCase
             'name' => $user->name,
             'id_number' => $user->id_number,
             'email' => $user->email,
+            'username' => $user->username,
             'password' => $user->password,
             'password_confirmation' => $user->password
         ]);

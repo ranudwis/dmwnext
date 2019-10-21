@@ -27,6 +27,7 @@ class UserSignupRequest extends FormRequest
             'name' => 'required',
             'id_number' => 'required|digits:14|unique:users,id_number',
             'email' => 'required|email|unique:users,email',
+            'username' => 'required|unique:users,username',
             'password' => 'required|confirmed',
         ];
     }
