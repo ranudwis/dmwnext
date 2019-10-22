@@ -20,12 +20,19 @@
 
     <div class="field">
         <div class="control">
-            <button class="button is-primary">Masuk</button>
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <button class="button is-primary">Masuk</button>
+                    </div>
+                    <div class="level-item">
+                        <p>
+                            Belum punya akun? <a href="{{ route('auth.signup') }}">Daftar</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </form>
-
-<p>
-    Belum punya akun? <a href="{{ route('auth.signup') }}">Daftar</a>
-</p>
 @endsection

@@ -48,11 +48,19 @@
 
     <div class="field">
         <div class="control">
-            <button class="button is-primary">Daftar</button>
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <button class="button is-primary">Daftar</button>
+                    </div>
+                    <div class="level-item">
+                        <p>
+                            Sudah punya akun? <a href="{{ route('auth.signin') }}">Masuk</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </form>
-<p>
-    Sudah punya akun? <a href="{{ route('auth.signin') }}">Masuk</a>
-</p>
 @endsection
