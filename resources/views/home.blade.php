@@ -45,10 +45,7 @@
         @endslot
 
         <div class="container has-text-centered">
-            <h2 class="title is-1">DMW++</h2>
-            <p class="subtitle is-3">
-                Database Modul dan Webtutor
-            </p>
+            {!! $greeting_message !!}
 
             <div class="field">
                 <div class="control has-icons-right">

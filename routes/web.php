@@ -11,7 +11,7 @@
 |
 */
 
-Route::view('/', 'home')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/keluar', 'AuthController@signout')->name('signout');
 
