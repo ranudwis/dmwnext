@@ -69,11 +69,4 @@ class SigninTest extends TestCase
 
         $response->assertRedirect(route('home'));
     }
-
-    public function testUserCantSignoutWhenNotLoggedIn()
-    {
-        $response = $this->get(route('signout'));
-
-        $response->assertRedirect(route('auth.signin'));
-    }
 }
