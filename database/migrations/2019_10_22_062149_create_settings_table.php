@@ -17,6 +17,7 @@ class CreateSettingsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('label');
+            $table->string('description');
             $table->string('value');
 
             $table->index('name');

@@ -27,4 +27,15 @@ class SettingTest extends TestCase
 
         $this->assertIsString($value);
     }
+
+    public function testGetMultipleSettingsValue()
+    {
+        $values = Setting::getMultiple('greeting_message', 'about');
+
+        $this->assertIsArray($values);
+
+        $this->assertCount(2, $values);
+
+        $this->assertIsString($values['greeting_message']);
+    }
 }
