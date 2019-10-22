@@ -6752,7 +6752,7 @@ a.list-item {
 }
 
 .menu-list a:hover {
-  background-color: whitesmoke;
+  background-color: #dbdbdb;
   color: #363636;
 }
 
@@ -12153,5 +12153,30 @@ label.panel-block:hover {
 
 .main-notification--show {
   display: block;
+}
+
+.navbar-dashboard {
+  margin-bottom: 32px;
+}
+
+.admin {
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+.dashboard-summary {
+  margin-bottom: 32px;
+}
+
+.dashboard-summary .title {
+  font-weight: 200;
+}
+
+.dashboard-summary .subtitle {
+  font-weight: bold;
+}
+
+.brand-text {
+  font-weight: bold;
 }
 

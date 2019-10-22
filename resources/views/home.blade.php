@@ -25,7 +25,7 @@
 
                         <div id="mainNavbar" class="navbar-menu">
                             <div class="navbar-start">
-                                <a class="navbar-item" href="">Mata Kuliah</a>
+                                <a class="navbar-item" href="">Modul</a>
                                 <a class="navbar-item" href="">Web Tutorial</a>
                                 <a class="navbar-item" href="">ASK</a>
                             </div>
@@ -70,7 +70,7 @@
                                 <i class="fas fa-book fa-fw"></i>
                             </span>
 
-                            <span>Mata Kuliah</span>
+                            <span>Modul</span>
                         </a>
                     </div>
                     <div class="control">

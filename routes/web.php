@@ -11,7 +11,9 @@
 |
 */
 
-Route::view('/', 'home');
+Route::view('/', 'home')->name('home');
+
+Route::get('/keluar', 'AuthController@signout')->name('signout');
 
 Route::middleware('guest')->name('auth.')->group(function() {
     Route::view('/daftar', 'auth/signup')->name('signup');

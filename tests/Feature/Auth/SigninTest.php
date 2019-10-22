@@ -60,4 +60,20 @@ class SigninTest extends TestCase
 
         $response->assertRedirect(route('dashboard.index'));
     }
+
+    public function testUserCanDoSignout()
+    {
+        $user = factory(User::class)->create();
+
+        $response = $this->actingAs($user)->get(route('signout'));
+
+        $response->assertRedirect(route('home'));
+    }
+
+    public function testUserCantSignoutWhenNotLoggedIn()
+    {
+        $response = $this->get(route('signout'));
+
+        $response->assertRedirect(route('auth.signin'));
+    }
 }

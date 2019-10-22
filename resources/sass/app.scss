@@ -31,6 +31,10 @@ $custom-colors: ("indigo": ($indigo, $indigo-invert, $indigo-light, $indigo-dark
 $primary: $blue;
 $danger: $red;
 
+@import 'bulma/sass/utilities/initial-variables';
+
+$menu-item-hover-background-color: $grey-lighter;
+
 @import "bulma";
 
 .mainfeaturelink {
@@ -47,4 +51,29 @@ $danger: $red;
 
 .main-notification--show {
     display: block;
+}
+
+.navbar-dashboard {
+    margin-bottom: $gap;
+}
+
+.admin {
+    height: 100vh;
+    background-color: $white-ter;
+}
+
+.dashboard-summary {
+    margin-bottom: $gap;
+
+    .title {
+        font-weight: 200;
+    }
+
+    .subtitle {
+        font-weight: bold;
+    }
+}
+
+.brand-text {
+    font-weight: bold;
 }
