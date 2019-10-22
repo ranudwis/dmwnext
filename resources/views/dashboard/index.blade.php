@@ -5,16 +5,7 @@ Dashboard
 @endsection
 
 @section('content')
-<nav class="breadcrumb" aria-label="breadcrumbs">
-    <ul>
-        <li>
-            <a href="{{ route('dashboard.index') }}">Dashboard</a>
-        </li>
-        <li class="is-active">
-            <a href="">Ringkasan</a>
-        </li>
-    </ul>
-</nav>
+{{ Breadcrumbs::render('dashboard', 'Ringkasan', route('dashboard.index')) }}
 
 <section class="dashboard-summary">
     <div class="tile is-ancestor has-text-centered">
