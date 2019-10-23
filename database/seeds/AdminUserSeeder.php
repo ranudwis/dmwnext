@@ -18,6 +18,7 @@ class AdminUserSeeder extends Seeder
             'password' => 'admin',
             'id_number' => '0',
             'username' => 'admin'
+            'admin' => true,
         ]);
     }
 }
