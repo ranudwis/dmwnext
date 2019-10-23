@@ -18,7 +18,7 @@ class CreateSettingsTable extends Migration
             $table->string('name');
             $table->string('label');
             $table->string('description');
-            $table->string('value');
+            $table->text('value');
 
             $table->index('name');
         });
