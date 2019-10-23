@@ -1,12 +1,6 @@
 @extends('dashboard/dashboard_main')
 
-@section('title')
-Dashboard
-@endsection
-
 @section('content')
-{{ Breadcrumbs::render('dashboard', 'Ringkasan', route('dashboard.index')) }}
-
 <section class="dashboard-summary">
     <div class="tile is-ancestor has-text-centered">
         <div class="tile is-parent">

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> @yield('title') | DMWDashboard</title>
+        <title> {{ $dashboard_title ?? 'Dashboard' }} | DMWDashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="{{ asset('fonts/fontawesome-5.9.0/css/all.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
@@ -60,10 +60,14 @@
 
                         <ul class="menu-list">
                             <li>
-                                <a class="is-active" href="">Dashboard</a>
+                                <a class="{{ $dashboard_active('dashboard') }}" href="{{ route('dashboard.index') }}">
+                                    Dashboard
+                                </a>
                             </li>
                             <li>
-                                <a class="" href="">Pengaturan</a>
+                                <a class="{{ $dashboard_active('settings') }}" href="{{ route('dashboard.settings') }}">
+                                    Pengaturan
+                                </a>
                             </li>
                         </ul>
 
@@ -94,6 +98,7 @@
                 </div>
 
                 <div class="column is-9">
+                    {{ $breadcrumbs() }}
                     @yield('content')
                 </div>
             </div>

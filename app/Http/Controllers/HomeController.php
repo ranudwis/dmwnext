@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $greeting_message = Setting::get('greeting_message');
+        $settings = Setting::getMultiple('greeting_message', 'about');
 
-        return view('home', compact('greeting_message'));
+        return view('home', compact('settings'));
     }
 }

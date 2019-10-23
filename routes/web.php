@@ -23,6 +23,12 @@ Route::middleware('guest')->name('auth.')->group(function() {
     Route::post('/masuk', 'AuthController@signin')->name('signin');
 });
 
-Route::middleware('auth')->name('dashboard.')->group(function() {
-    Route::view('/dashboard', 'dashboard/index')->name('index');
+Route::middleware('auth')
+    ->name('dashboard.')
+    ->prefix('dashboard')
+    ->namespace('Dashboard')
+    ->group(function() {
+    Route::get('/', 'DashboardIndexController@index')->name('index');
+
+    Route::get('/pengaturan', 'SettingsController@index')->name('settings');
 });

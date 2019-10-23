@@ -1,10 +1,15 @@
 <?php
 
-Breadcrumbs::for('dashboard_home', function ($trail) {
+Breadcrumbs::for('dashboard', function ($trail) {
     $trail->push('Dashboard', route('dashboard.index'));
 });
 
-Breadcrumbs::for('dashboard', function ($trail, $page, $url) {
-    $trail->parent('dashboard_home');
-    $trail->push($page, $url);
+Breadcrumbs::for('dashboard.index', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Ringkasan', route('dashboard.index'));
+});
+
+Breadcrumbs::for('dashboard.settings', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Pengaturan', route('dashboard.settings'));
 });
