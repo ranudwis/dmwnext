@@ -30,5 +30,9 @@ Route::middleware('auth')
     ->group(function() {
     Route::get('/', 'DashboardIndexController@index')->name('index');
 
-    Route::get('/pengaturan', 'SettingsController@index')->name('settings');
+    Route::middleware('admin')->group(function () {
+        Route::get('/pengaturan', 'SettingsController@index')->name('settings');
+        Route::get('/pengaturan/{name}', 'SettingsController@edit')->name('settings.edit');
+        Route::post('/pengaturan/{name}', 'SettingsController@update')->name('settings.update');
+    });
 });

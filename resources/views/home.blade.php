@@ -45,7 +45,7 @@
         @endslot
 
         <div class="container has-text-centered">
-            {!! $greeting_message !!}
+            {!! $settings['greeting_message'] !!}
 
             <div class="field">
                 <div class="control has-icons-right">
@@ -89,10 +89,7 @@
             <h3 class="title has-text-centered">Apa itu DMW++?</h3>
 
             <div class="content">
-                <p>
-                    DMW++ adalah website yang disediakan oleh Divisi Pendidikan Dan Pelatihan
-                    Himpunan Mahasiswa Informatika Universitas Diponegoro
-                </p>
+                {!! $settings['about'] !!}
             </div>
         </div>
     </section>

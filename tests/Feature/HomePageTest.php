@@ -13,9 +13,17 @@ class HomePageTest extends TestCase
      *
      * @return void
      */
+
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->seed('SettingsTableSeeder'); // Homepage needs data from settings table
+    }
+
     public function testHomepageCanBeAccessed()
     {
-        $response = $this->get('/');
+        $response = $this->get(route('home'));
 
         $response->assertStatus(200);
 
