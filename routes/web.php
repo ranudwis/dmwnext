@@ -34,5 +34,9 @@ Route::middleware('auth')
         Route::get('/pengaturan', 'SettingsController@index')->name('settings');
         Route::get('/pengaturan/{name}', 'SettingsController@edit')->name('settings.edit');
         Route::post('/pengaturan/{name}', 'SettingsController@update')->name('settings.update');
+
+        Route::get('/semester', 'CoursegroupController@index')->name('coursegroups');
+        Route::get('/semester/buat', 'CoursegroupController@create')->name('coursegroups.create');
+        Route::post('/semester', 'CoursegroupController@store')->name('coursegroups.store');
     });
 });

@@ -20,3 +20,13 @@ Breadcrumbs::for('dashboard.settings.edit', function ($trail, $setting) {
         'name' => $setting->name
     ]));
 });
+
+Breadcrumbs::for('dashboard.coursegroups', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Semester', route('dashboard.coursegroups'));
+});
+
+Breadcrumbs::for('dashboard.coursegroups.create', function ($trail) {
+    $trail->parent('dashboard.coursegroups');
+    $trail->push('Tambah', route('dashboard.coursegroups.create'));
+});

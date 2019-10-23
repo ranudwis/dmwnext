@@ -72,12 +72,14 @@
                         </ul>
 
                         <p class="menu-label">
-                            Modul
+                            Mata Kuliah
                         </p>
 
                         <ul class="menu-list">
                             <li>
-                                <a href="">Kategori</a>
+                                <a class="{{ $dashboard_active('coursegroups') }}" href="{{ route('dashboard.coursegroups')}}">
+                                    Semester
+                                </a>
                                 <a href="">Mata kuliah</a>
                                 <a href="">Soal</a>
                                 <a href="">Pembahasan</a>
