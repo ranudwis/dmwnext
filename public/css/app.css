@@ -12121,7 +12121,7 @@ label.panel-block:hover {
 }
 
 .section {
-  padding: 3rem 1.5rem;
+  padding: 2rem 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -12173,5 +12173,43 @@ label.panel-block:hover {
 
 .brand-text {
   font-weight: bold;
+}
+
+.table-course__name {
+  width: 200px;
+}
+
+.linkblock {
+  background-color: white;
+}
+
+.linkblock a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.5em 1em;
+  color: #363636;
+}
+
+.linkblock a div {
+  flex-grow: 1;
+}
+
+.linkblock a div:first-child {
+  flex-basis: 25%;
+  flex-grow: 0;
+}
+
+.linkblock a::after {
+  content: "\F054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  flex-grow: 0;
+}
+
+.linkblock a:hover {
+  background-color: #fafafa;
 }
 

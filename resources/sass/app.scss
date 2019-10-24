@@ -18,6 +18,8 @@
 
 $family-sans-serif: 'Roboto';
 
+$section-padding: 2rem 1rem;
+
 $blue: #2196f3;
 $red: #f44336;
 
@@ -72,4 +74,42 @@ $menu-item-hover-background-color: $grey-lighter;
 
 .brand-text {
     font-weight: bold;
+}
+
+.table-course__name {
+    width: 200px;
+}
+
+.linkblock {
+    background-color: $table-background-color;
+
+    a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: $table-cell-border;
+        border-width: $table-cell-border-width;
+        padding: 0.5em 1em;
+        color: $table-color;
+
+        div {
+            &:first-child {
+                flex-basis: 25%;
+                flex-grow: 0;
+            }
+
+            flex-grow: 1;
+        }
+
+        &::after {
+            content: '\f054';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            flex-grow: 0;
+        }
+
+        &:hover {
+          background-color: $table-row-hover-background-color
+        }
+    }
 }
