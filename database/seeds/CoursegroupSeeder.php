@@ -11,7 +11,7 @@ class CoursegroupSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('coursegroups')->insert([
+        DB::table('coursegroups')->insertOrIgnore([
             [
                 'name' => 'Semester 1'
             ], [
