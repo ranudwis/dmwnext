@@ -12213,3 +12213,16 @@ label.panel-block:hover {
   background-color: #fafafa;
 }
 
+.button.is-circled {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.dashboard-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+

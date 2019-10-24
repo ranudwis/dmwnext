@@ -113,3 +113,16 @@ $menu-item-hover-background-color: $grey-lighter;
         }
     }
 }
+
+.button.is-circled {
+    padding: 0;
+    width: $size-1;
+    height: $size-1;
+    border-radius: 50%;
+}
+
+.dashboard-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
