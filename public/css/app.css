@@ -435,7 +435,7 @@ th:not([align]) {
 }
 
 html {
-  background-color: white;
+  background-color: whitesmoke;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -12157,11 +12157,6 @@ label.panel-block:hover {
 
 .navbar-dashboard {
   margin-bottom: 32px;
-}
-
-.admin {
-  height: 100vh;
-  background-color: whitesmoke;
 }
 
 .dashboard-summary {

@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     </head>
 
-    <body class="admin">
+    <body>
         <nav class="navbar is-white navbar-dashboard">
             <div class="container">
                 <div class="navbar-brand">

@@ -33,6 +33,7 @@ $danger: $red;
 
 @import 'bulma/sass/utilities/initial-variables';
 
+$body-background-color: $white-ter;
 $menu-item-hover-background-color: $grey-lighter;
 
 @import "bulma";
@@ -55,11 +56,6 @@ $menu-item-hover-background-color: $grey-lighter;
 
 .navbar-dashboard {
     margin-bottom: $gap;
-}
-
-.admin {
-    height: 100vh;
-    background-color: $white-ter;
 }
 
 .dashboard-summary {
