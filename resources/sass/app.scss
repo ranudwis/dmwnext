@@ -21,14 +21,16 @@ $family-sans-serif: 'Roboto';
 $section-padding: 2rem 1rem;
 
 $blue: #2196f3;
-$red: #f44336;
+$red: #ef5350;
 
 $indigo: #1565c0;
 $indigo-invert: findColorInvert($indigo);
 $indigo-light: findLightColor($indigo);
 $indigo-dark: findDarkColor($indigo);
 
-$custom-colors: ("indigo": ($indigo, $indigo-invert, $indigo-light, $indigo-dark));
+$custom-colors: (
+    "indigo": ($indigo, $indigo-invert, $indigo-light, $indigo-dark),
+);
 
 $primary: $blue;
 $danger: $red;
@@ -106,6 +108,7 @@ $menu-item-hover-background-color: $grey-lighter;
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             flex-grow: 0;
+            color: $grey;
         }
 
         &:hover {
@@ -125,4 +128,5 @@ $menu-item-hover-background-color: $grey-lighter;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
 }
