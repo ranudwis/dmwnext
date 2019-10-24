@@ -7,11 +7,9 @@
     <div class="field">
         <label class="label">Nama</label>
         <div class="control">
-            <input class="input" type="text" name="name" autofocus />
+            <input class="input @formError('name')" type="text" name="name" value="{{ old('name') }}" autofocus />
         </div>
-        <p class="help">
-            Nama semester
-        </p>
+        @formHelp('name', 'Nama semester')
     </div>
 
     <div class="field">

@@ -36,7 +36,12 @@ Route::middleware('auth')
         Route::post('/pengaturan/{name}', 'SettingsController@update')->name('settings.update');
 
         Route::get('/semester', 'CoursegroupController@index')->name('coursegroups');
-        Route::get('/semester/buat', 'CoursegroupController@create')->name('coursegroups.create');
+        Route::get('/semester/tambah', 'CoursegroupController@create')->name('coursegroups.create');
         Route::post('/semester', 'CoursegroupController@store')->name('coursegroups.store');
+
+        Route::get('/matakuliah', 'CourseController@index')->name('courses');
+        Route::get('/matakuliah/tambah', 'CourseController@create')->name('courses.create');
+        Route::post('/matakuliah', 'CourseController@store')->name('courses.store');
+        Route::get('/matakuliah/{course}', 'CourseController@show')->name('courses.show');
     });
 });

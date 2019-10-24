@@ -14,7 +14,7 @@ class SettingsTest extends TestCase
         parent::setUp();
 
         $this->user = factory(User::class)->create();
-        $this->admin = factory(User::class)->create(['admin' => true]);
+        $this->admin = factory(User::class)->state('admin')->create();
 
         $this->seed('SettingsTableSeeder');
     }

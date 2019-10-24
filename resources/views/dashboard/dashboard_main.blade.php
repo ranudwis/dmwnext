@@ -80,7 +80,9 @@
                                 <a class="{{ $dashboard_active('coursegroups') }}" href="{{ route('dashboard.coursegroups')}}">
                                     Semester
                                 </a>
-                                <a href="">Mata kuliah</a>
+                                <a class="{{ $dashboard_active('courses') }}" href="{{ route('dashboard.courses') }}">
+                                    Mata kuliah
+                                </a>
                                 <a href="">Soal</a>
                                 <a href="">Pembahasan</a>
                                 <a href="">Modul kuliah</a>
@@ -101,6 +103,14 @@
 
                 <div class="column is-9">
                     {{ $breadcrumbs() }}
+                    @if ($errors->any())
+                        <div class="notification is-danger">
+                            <span class="icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </span>
+                            Terjadi kesalahan, pastikan data yang Anda masukan sudah benar.
+                        </div>
+                    @endif
                     @yield('content')
                 </div>
             </div>

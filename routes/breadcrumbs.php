@@ -30,3 +30,18 @@ Breadcrumbs::for('dashboard.coursegroups.create', function ($trail) {
     $trail->parent('dashboard.coursegroups');
     $trail->push('Tambah', route('dashboard.coursegroups.create'));
 });
+
+Breadcrumbs::for('dashboard.courses', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Mata Kuliah', route('dashboard.courses'));
+});
+
+Breadcrumbs::for('dashboard.courses.show', function ($trail, $course) {
+    $trail->parent('dashboard.courses');
+    $trail->push($course->name, route('dashboard.courses.show', ['course' => $course->slug]));
+});
+
+Breadcrumbs::for('dashboard.courses.create', function ($trail) {
+    $trail->parent('dashboard.courses');
+    $trail->push('Tambah', route('dashboard.courses.create'));
+});

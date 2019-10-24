@@ -20,7 +20,7 @@ class CreateCoursesTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->integer('credit');
-            $table->string('cover');
+            $table->string('cover')->nullable();
             $table->timestamps();
 
             $table->foreign('coursegroup_id')

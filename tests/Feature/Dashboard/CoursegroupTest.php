@@ -17,9 +17,7 @@ class CoursegroupTest extends TestCase
     {
         parent::setUp();
 
-        $this->admin = factory(User::class)->create([
-            'admin' => true
-        ]);
+        $this->admin = factory(User::class)->state('admin')->create();
     }
 
     public function testPageCanBeAccessed()

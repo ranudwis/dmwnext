@@ -7,11 +7,9 @@
     <div class="field">
         <label class="label">{{ $setting->label }}</label>
         <div class="control">
-            <textarea class="textarea" name="value" autofocus>{{ $setting->value }}</textarea>
+            <textarea class="textarea @formError('value')" name="value" autofocus>{{ $setting->value }}</textarea>
         </div>
-        <p class="help">
-            {{ $setting->description }}
-        </p>
+        @formHelp('value', $setting->description)
     </div>
 
     <div class="field">

@@ -1,9 +1,15 @@
 @extends('dashboard/dashboard_main')
 
 @section('content')
-<a class="button is-right is-primary" href="{{ route('dashboard.coursegroups.create') }}">
-    Tambah
-</a>
+@component('dashboard/partial/action')
+    @slot('right')
+        <a class="button is-primary is-circled" href="{{ route('dashboard.coursegroups.create') }}">
+            <span class="icon">
+                <i class="fas fa-plus"></i>
+            </span>
+        </a>
+    @endslot
+@endcomponent
 
 <section class="section">
     @if ($coursegroups->isEmpty())
@@ -12,12 +18,12 @@
         <table class="table is-fullwidth is-hoverable">
             <thead>
                 <tr>
-                    <td>
+                    <th>
                         #
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Nama
-                    </td>
+                    </th>
                 </tr>
             </thead>
 
