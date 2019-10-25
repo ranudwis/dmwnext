@@ -4,7 +4,12 @@
 <div class="box">
     <div class="dashboard-action dashboard-action--course">
         <div>
-            <h3 class="title is-3">{{ $course->name }}</h3>
+            <h3 class="title is-3">
+                {{ $course->name }}
+                @unless ($course->showed)
+                    <span class="tag is-warning is-light has-text-weight-light">Disembunyikan</span>
+                @endunless
+            </h3>
             <p class="subtitle is-5">
                 {{ $course->code }} | {{ $course->credit }} SKS
             </p>

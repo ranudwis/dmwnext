@@ -6,6 +6,14 @@
     @csrf
 
     <div class="field">
+        <input class="switch" type="checkbox" id="f-showed" name="showed" @if ($course->showed) checked @endif />
+        <label class="label" for="f-showed">Ditampilkan</label>
+        <p class="help">
+            Matikan untuk menyembunyikan mata kuliah di halaman utama
+        </p>
+    </div>
+
+    <div class="field">
         <label class="label">Kode</label>
         <div class="control">
             <input class="input @formError('code')" type="text" name="code" value="{{ $course->code }}" autofocus />

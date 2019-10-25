@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-    protected $fillable = ['coursegroup_id', 'code', 'name', 'slug', 'credit', 'description'];
+    protected $fillable = ['coursegroup_id', 'code', 'name', 'slug', 'credit', 'description', 'showed'];
 
     public function coursegroup()
     {

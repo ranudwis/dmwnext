@@ -60,7 +60,9 @@ class CourseController extends DashboardController
 
     public function update(CourseRequest $request, Course $course)
     {
-        $course->update($request->all());
+        $course->update([
+            'showed' => $request->has('showed')
+        ] + $request->all());
 
         return redirect()->route('dashboard.courses.show', ['course' => $course->slug]);
     }

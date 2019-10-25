@@ -41,6 +41,7 @@ $body-background-color: $white-ter;
 $menu-item-hover-background-color: $grey-lighter;
 
 @import "bulma";
+@import 'bulma-switch';
 
 .mainfeaturelink {
     padding-bottom: 2rem;
@@ -101,6 +102,10 @@ $menu-item-hover-background-color: $grey-lighter;
             }
 
             flex-grow: 1;
+        }
+
+        .tag {
+            margin-right: 1em;
         }
 
         &::after {

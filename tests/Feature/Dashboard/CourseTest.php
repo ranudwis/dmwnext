@@ -58,7 +58,33 @@ class CourseTest extends TestCase
 
         $response->assertRedirect(route('dashboard.courses.show', ['course' => $post_data['slug']]));
         $this->assertDatabaseHas('courses', [
-            'id' => $course->id
+            'id' => $course->id,
+            'showed' => false,
+        ] + $post_data);
+    }
+
+    public function testCanUpdateCourseToShowCourse()
+    {
+        $course = Course::first();
+        $course->update(['show' => false]);
+
+        $post_data = [
+            'showed' => 'active',
+            'code' => 'AIK122',
+            'name' => 'Programming Course',
+            'coursegroup_id' => $course->coursegroup_id,
+            'credit' => '4',
+            'slug' => 'pc',
+            'description' => 'The programming course is something'
+        ];
+
+        $response = $this->actingAs($this->admin)
+            ->putJson(route('dashboard.courses.update', ['course' => $course->slug]), $post_data);
+
+        $response->assertRedirect(route('dashboard.courses.show', ['course' => $post_data['slug']]));
+        $this->assertDatabaseHas('courses', [
+            'id' => $course->id,
+            'showed' => true,
         ] + $post_data);
     }
 }

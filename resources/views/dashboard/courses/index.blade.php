@@ -24,6 +24,9 @@
                     <div>
                         {{ $course->name }}
                     </div>
+                    @unless ($course->showed)
+                        <span class="tag is-warning is-light">Disembunyikan</span>
+                    @endunless
                 </a>
             @endforeach
         </div>
