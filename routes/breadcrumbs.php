@@ -45,3 +45,8 @@ Breadcrumbs::for('dashboard.courses.create', function ($trail) {
     $trail->parent('dashboard.courses');
     $trail->push('Tambah', route('dashboard.courses.create'));
 });
+
+Breadcrumbs::for('dashboard.courses.edit', function ($trail, $course) {
+    $trail->parent('dashboard.courses.show', $course);
+    $trail->push('Edit', route('dashboard.courses.edit', ['course' => $course->slug]));
+});

@@ -12228,3 +12228,8 @@ label.panel-block:hover {
   padding: 0 1rem;
 }
 
+.dashboard-action--course {
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+

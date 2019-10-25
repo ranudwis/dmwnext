@@ -47,4 +47,21 @@ class CourseController extends DashboardController
 
         return view('dashboard.courses.show', compact('course'));
     }
+
+    public function edit(Course $course)
+    {
+        $this->breadcrumb_name = 'dashboard.courses.edit';
+        $this->breadcrumb_parameter = [$course];
+
+        $coursegroups = Coursegroup::all();
+
+        return view('dashboard.courses.edit', compact('coursegroups', 'course'));
+    }
+
+    public function update(CourseRequest $request, Course $course)
+    {
+        $course->update($request->all());
+
+        return redirect()->route('dashboard.courses.show', ['course' => $course->slug]);
+    }
 }

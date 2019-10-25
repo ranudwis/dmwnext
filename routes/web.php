@@ -43,5 +43,7 @@ Route::middleware('auth')
         Route::get('/matakuliah/tambah', 'CourseController@create')->name('courses.create');
         Route::post('/matakuliah', 'CourseController@store')->name('courses.store');
         Route::get('/matakuliah/{course}', 'CourseController@show')->name('courses.show');
+        Route::get('/matakuliah/{course}/edit', 'CourseController@edit')->name('courses.edit');
+        Route::put('/matakuliah/{course}', 'CourseController@update')->name('courses.update');
     });
 });

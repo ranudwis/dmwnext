@@ -129,4 +129,10 @@ $menu-item-hover-background-color: $grey-lighter;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
+
+    &--course {
+        padding: 0;
+
+        margin-bottom: 1.5rem;
+    }
 }

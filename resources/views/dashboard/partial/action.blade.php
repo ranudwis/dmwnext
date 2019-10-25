@@ -1,9 +1,9 @@
-<div class="dashboard-action">
+<div class="dashboard-action {{ $class ?? '' }}">
     <div>
         {{ $slot }}
     </div>
 
     <div>
-        {{ $right }}
+        {{ $right ?? '' }}
     </div>
 </div>
