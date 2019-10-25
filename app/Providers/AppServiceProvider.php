@@ -34,10 +34,10 @@ class AppServiceProvider extends ServiceProvider
 
             if (isset($data[1])) {
                 $use_help = 'true';
-                $actual_help = substr(trim($data[1]), 1, -1);
+                $actual_help = trim($data[1]);
             } else {
                 $use_help = 'false';
-                $actual_help = '';
+                $actual_help = "''";
             }
 
             return "<?php
@@ -46,7 +46,8 @@ class AppServiceProvider extends ServiceProvider
                         ' . session('errors')->first($name) . '
                     </p>';
                 } else if ($use_help) {
-                    echo '<p class=\"help\">$actual_help</p>';
+                    echo '<p class=\"help\">
+                    ' . $actual_help . '</p>';
                 }
             ?>";
         });
