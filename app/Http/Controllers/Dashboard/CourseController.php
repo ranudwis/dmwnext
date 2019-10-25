@@ -9,12 +9,12 @@ use App\{Coursegroup, Course};
 
 class CourseController extends DashboardController
 {
-    protected $title = 'Mata Kuliah';
     protected $active = 'courses';
-    protected $breadcrumb_name = 'dashboard.courses';
 
     public function index()
     {
+        $this->page('Mata Kuliah', 'dashboard.courses');
+
         $courses = Course::with('coursegroup')
             ->orderBy('coursegroup_id')
             ->orderBy('name')
@@ -26,7 +26,7 @@ class CourseController extends DashboardController
 
     public function create()
     {
-        $this->breadcrumb_name = 'dashboard.courses.create';
+        $this->page('Tambah mata kuliah', 'dashboard.courses.create');
 
         $coursegroups = Coursegroup::select('id', 'name')->get();
 
@@ -42,16 +42,14 @@ class CourseController extends DashboardController
 
     public function show(Course $course)
     {
-        $this->breadcrumb_name = 'dashboard.courses.show';
-        $this->breadcrumb_parameter = [$course];
+        $this->page($course->name, 'dashboard.courses.show', $course);
 
         return view('dashboard.courses.show', compact('course'));
     }
 
     public function edit(Course $course)
     {
-        $this->breadcrumb_name = 'dashboard.courses.edit';
-        $this->breadcrumb_parameter = [$course];
+        $this->page('Edit ' . $course->name, 'dashboard.courses.edit', $course);
 
         $coursegroups = Coursegroup::all();
 

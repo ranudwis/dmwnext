@@ -9,12 +9,12 @@ use App\Setting;
 
 class SettingsController extends DashboardController
 {
-    protected $title = 'Pengaturan';
     protected $active = 'settings';
-    protected $breadcrumb_name = 'dashboard.settings';
 
     public function index()
     {
+        $this->page('Pengaturan', 'dashboard.settings');
+
         $settings = Setting::all();
 
         return view('dashboard.settings.index', compact('settings'));
@@ -24,7 +24,8 @@ class SettingsController extends DashboardController
     {
         $setting = Setting::where('name', $name)->firstOrFail();
 
-        $this->breadcrumb_name = 'dashboard.settings.edit';
+        $this->page('Pengaturan: ' . $setting->label, 'dashboard.settings.edit');
+
         $this->breadcrumb_parameter = [$setting];
 
         return view('dashboard.settings.edit', compact('setting'));

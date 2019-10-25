@@ -8,12 +8,12 @@ use App\Coursegroup;
 
 class CoursegroupController extends DashboardController
 {
-    protected $title = 'Semester';
     protected $active = 'coursegroups';
-    protected $breadcrumb_name = 'dashboard.coursegroups';
 
     public function index()
     {
+        $this->page('Semester', 'dashboard.coursegroups');
+
         $coursegroups = Coursegroup::all();
 
         return view('dashboard.coursegroups.index', compact('coursegroups'));
@@ -21,7 +21,7 @@ class CoursegroupController extends DashboardController
 
     public function create()
     {
-        $this->breadcrumb_name = 'dashboard.coursegroups.create';
+        $this->page('Tambah semester', 'dashboard.coursegroups.create');
 
         return view('dashboard.coursegroups.create');
     }

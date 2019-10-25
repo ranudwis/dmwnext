@@ -28,7 +28,18 @@ class DashboardController extends Controller
             }
         });
 
-        view()->share('dashboard_title', $this->title);
+        // dashboard_title shared variable made as function because page() function
+        // to change the title is called after class is constructed so that
+        // the true title value is called after page() function called
+        view()->share('dashboard_title', function () {
+            return $this->title;
+        });
     }
 
+    protected function page($title, $breadcrumb_name = 'dashboard', ...$breadcrumb_parameter)
+    {
+        $this->title = $title;
+        $this->breadcrumb_name = $breadcrumb_name;
+        $this->breadcrumb_parameter = $breadcrumb_parameter;
+    }
 }

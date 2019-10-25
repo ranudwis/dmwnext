@@ -7,12 +7,11 @@ use App\Http\Controllers\Controller;
 
 class DashboardIndexController extends DashboardController
 {
-    protected $title = 'Dashboard';
     protected $active = 'dashboard';
-    protected $breadcrumb_name = 'dashboard.index';
 
     public function index()
     {
+        $this->page('Ringkasan', 'dashboard.index');
         return view('dashboard/index');
     }
 }
